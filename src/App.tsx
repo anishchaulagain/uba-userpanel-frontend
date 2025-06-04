@@ -1,17 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import HomePage from './pages/HomePage'
+import { Navigate, Route, Routes, useNavigate } from 'react-router-dom';
+import './App.css';
+import RegisterForm from './_components/auth/RegisterForm';
+import LoginForm from './_components/auth/LoginForm';
 
-function App() {
- 
+export function App() {
+  const isAuthenticated = false;
 
   return (
     <>
-      <HomePage/>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            isAuthenticated ? (
+              <Navigate to="/Homepage" replace />
+            ) : (
+              <Navigate to="/login" replace />
+            )
+          }
+        />
+        <Route
+          path="/register"
+          element={<RegisterForm  />}
+        />
+        <Route
+          path="/login"
+          element={<LoginForm  />}
+        />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
