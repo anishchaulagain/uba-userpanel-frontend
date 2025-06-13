@@ -1,0 +1,31 @@
+{
+  "name": "graphql-listing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "ts-node src/server.ts",
+    "build": "tsc",
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "graphql": "^16.11.0",
+    "mysql2": "^3.14.1",
+    "typeorm": "^0.3.24"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^30.0.0",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2"
+  }
+}
