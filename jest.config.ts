@@ -8,7 +8,8 @@ const config: Config = {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(gif|ttf|eot|svg|png)$' : '<rootDir>/test/mocks/fileMock.js'
   },
-  setupFilesAfterEnv: ['./test/jest.setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/test/jest.setup.ts'],
+  
   rootDir: './',
   transform: {
     "^.+\\.tsx?$": "ts-jest"
@@ -21,6 +22,7 @@ const config: Config = {
       },
     },
   },
+  
 };
 
 export default config;
