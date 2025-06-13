@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "esModuleInterop": true,
+    "strict": true,
+    "types": ["jest"],
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+
+    "experimentalDecorators": true,     
+    "emitDecoratorMetadata": true       
+  },
+  "include": ["src", "**/*.test.ts"],
+  "exclude": ["node_modules", "dist"]
+}
